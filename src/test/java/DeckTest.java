@@ -33,4 +33,12 @@ public class DeckTest {
         Card card2 = deck.getFirstCard();
         assertNotEquals(card1, card2);
     }
+
+    @Test
+    public void dealCard(){
+        deck.populateDeck();
+        deck.shuffle();
+        Card dealtCard = deck.getFirstCard();
+        assertEquals(dealtCard, deck.dealCard());
+    }
 }

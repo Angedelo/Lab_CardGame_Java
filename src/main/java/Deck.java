@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.EnumSet;
 
 public class Deck {
@@ -21,4 +22,11 @@ public class Deck {
         }
     }
 
+    public Card getFirstCard() {
+        return cards.get(0);
+    }
+
+    public void shuffle() {
+        Collections.shuffle(this.cards);
+    }
 }
